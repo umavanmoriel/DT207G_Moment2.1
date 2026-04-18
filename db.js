@@ -13,7 +13,7 @@ connection.connect((err) => {
         console.error('Kunde inte ansluta till databasen:', err.message);
         return;
     }
-    console.log('Ansluten till databasen cv');
+    console.log('Ansluten till databasen DT207G_Moment2');
 });
 
 module.exports = connection;

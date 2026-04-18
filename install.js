@@ -3,7 +3,6 @@ const mysql = require('mysql2');
 // Anslut till MySQL (utan databas)
 const connection = mysql.createConnection({
     host: 'localhost',
-    database: 'DT207G_Moment2',
     user: 'root',
     password: ''
 });
