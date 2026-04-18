@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 // Anslut till MySQL (utan databas)
 const connection = mysql.createConnection({
     host: 'localhost',
-    database: 'Moment2',
+    database: 'DT207G_Moment2',
     user: 'root',
     password: ''
 });
@@ -17,17 +17,17 @@ connection.connect((err) => {
     console.log("Ansluten till MySQL!");
     
     // Skapa databasen
-    connection.query("CREATE DATABASE IF NOT EXISTS Moment2", (err) => {
+    connection.query("CREATE DATABASE IF NOT EXISTS DT207G_Moment2", (err) => {
         if (err) {
             console.error("Kunde inte skapa databas:", err);
             return;
         }
-        console.log("Databas 'Moment2' skapad!");
+        console.log("Databas 'DT207G_Moment2' skapad!");
         
-        // Byt till cv-databasen
-        connection.changeUser({database: 'cv'}, (err) => {
+        // Byt till DT207G_Moment2-databasen
+        connection.changeUser({database: 'DT207G_Moment2'}, (err) => {
             if (err) {
-                console.error("Kunde inte byta till cv:", err);
+                console.error("Kunde inte byta till DT207G_Moment2:", err);
                 return;
             }
             
