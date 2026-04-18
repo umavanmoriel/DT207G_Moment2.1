@@ -8,12 +8,16 @@ const connection = mysql.createConnection({
     database: 'DT207G_Moment2'
 });
 
-connection.connect((err) => {
+const promiseConnection = connection.promise();
+
+
+
+promiseConnection.connect((err) => {
     if (err) {
         console.error('Kunde inte ansluta till databasen:', err.message);
         return;
     }
-    console.log('Ansluten till databasen DT207G_Moment2');
+    console.log('Ansluten till databasen cv');
 });
 
-module.exports = connection;
+module.exports = promiseConnection;
